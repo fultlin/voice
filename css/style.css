@@ -5,7 +5,9 @@
 
 :root {
   --background-color: #2c2f34;
-  --background-around: #23272A;
+  --background-around: #23272a;
+  --left-servers-color: #c0dff1;
+  --primary-color: #99aab4;
 }
 
 * {
@@ -17,12 +19,11 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-
 }
 
 header {
-    background-color: var(--background-around);
-    display: none;
+  background-color: var(--background-around);
+  display: none;
 }
 
 h1 {
@@ -34,100 +35,214 @@ h1 {
 }
 
 main {
-    
-    background-color: var(--background-color);
-    flex-wrap: nowrap;
+  background-color: var(--background-color);
+  flex-wrap: nowrap;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .container {
-    max-width: 192rem;
-    display: flex;
+  max-width: 192rem;
+  display: flex;
 }
 
+/* left bar */
 .left-menu {
-    background-color: var(--background-around);
-    height: 100rem;
-    width: 6.8rem;
+  background-color: var(--background-around);
+  height: 100rem;
+  width: 6.8rem;
 }
 
 .account-image {
-    border-top: 1px var(--background-color) solid;
-    height: 8.5rem;
-    margin: 0 auto;
-    position: relative;
+  border-top: 1px var(--background-color) solid;
+  height: 8.5rem;
+  margin: 0 auto;
+  position: relative;
 }
 
-.account-image a{
-    display: block;
-    max-width: max-content;
-    position: relative;
-    top: 25%;
-    margin: auto;
+.account-image a {
+  display: block;
+  max-width: max-content;
+  position: relative;
+  top: 25%;
+  margin: auto;
 }
 
 .account-image:hover {
-    background: linear-gradient(90deg, #54608B 0%, #2C2F34 100%);
+  background: linear-gradient(90deg, #54608b 0%, #2c2f34 100%);
 }
 
-.logo {
-    display: block;
-    border-radius: 100px;
-    width: 5rem;
-    height: 5rem;
+.logo_self {
+  display: block;
+  border-radius: 100px;
+  width: 5rem;
+  height: 5rem;
 }
 
 .left-list li {
-    list-style: none;
-    height: 28rem;
-    border-top: 1px var(--background-color) solid;
-    display: flex;
-    align-items: flex-end;
-    max-height: 28rem;
+  list-style: none;
+  height: 28rem;
+  border-top: 1px var(--background-color) solid;
+  display: flex;
+  align-items: flex-end;
+  max-height: 28rem;
 }
 
-.left-list li img{
-    display: block;
-    margin: 0 auto;
-    margin-top: 0;
-    width: 6rem;
-    height: 6rem;
-    fill: #7289D9;
+.left-list li img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0;
+  width: 6rem;
+  height: 6rem;
+  fill: #7289d9;
 }
 
 .friends-left {
-    width: 4rem;
-    height: 4rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .settings {
-    border-top: 1px var(--background-color) solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6.9rem;
-
+  border-top: 1px var(--background-color) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.9rem;
 }
 
 .settings img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 a:hover .settings:hover {
-    background: linear-gradient(90deg, #54608B 0%, #2C2F34 100%);
+  background: linear-gradient(90deg, #54608b 0%, #2c2f34 100%);
 }
 
 .left-list li:hover {
-    background: linear-gradient(90deg, #54608B 0%, #2C2F34 100%);
-    animation: ease-in-out;
+  background: linear-gradient(90deg, #54608b 0%, #2c2f34 100%);
+  animation: ease-in-out;
 }
 
+/* list servers */
 .lists-server {
-    max-width: 24.5rem;
-    border-top: 1px var(--background-color) solid;
-    border-right: 1px var(--background-color) solid;
+  width: 100%;
+  height: 100vh;
+  max-width: 24.5rem;
+  max-height: 100rem;
+  border-top: 1px var(--background-color) solid;
+  border-right: 1px var(--background-color) solid;
+  padding-top: 1rem;
+  border-right: 1px var(--background-around) solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.servers {
+  overflow: auto;
+}
+
+.servers li {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-height: 24.5rem;
+  max-width: 24.5rem;
+  height: 100%;
+  padding: 1rem 2rem;
+}
+
+.servers li:hover {
+  background: #3e444e;
+}
+
+.server-icon {
+  border-radius: 100px;
+  max-width: 5.4rem;
+  max-height: 5.4rem;
+}
+
+.server-text {
+  width: 100%;
+  max-height: max-content;
+  align-self: center;
+}
+
+.server-name {
+  color: var(--left-servers-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  max-width: max-content;
+}
+
+.server-description {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: max-content;
+}
+
+.minmenu {
+  display: flex;
+  background-color: #1f2123;
+  padding: 1.6rem 1rem 1.6rem 1rem;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.user-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-status img {
+  max-width: 4rem;
+  max-height: 4rem;
+  border-radius: 100px;
+}
+
+.username {
+  color: var(--left-servers-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.status {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.MicroAndVoice {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.MicroAndVoice li {
+  padding: 0;
+  max-width: 3.6rem;
+}
+
+.MicroAndVoice img {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+/* chatroom */
+
+.chatroom {
+    width: 100%;
+    max-width: 1353px;
+}
+
+.header-chat {
+    border-right: 1px var(--background-around) solid;
+    border-bottom: 1px var(--background-around) solid;
 }
