@@ -238,11 +238,113 @@ a:hover .settings:hover {
 /* chatroom */
 
 .chatroom {
-    width: 100%;
-    max-width: 1353px;
+  width: 100%;
+  max-width: 1353px;
+  position: relative;
 }
 
 .header-chat {
-    border-right: 1px var(--background-around) solid;
-    border-bottom: 1px var(--background-around) solid;
+  border-right: 1px var(--background-around) solid;
+  border-bottom: 1px var(--background-around) solid;
+  height: 100%;
+  max-height: 4.6rem;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2rem;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.header-chat ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.header-chat li {
+    width: 100%;
+    height: 100%;
+    max-width: 4.4rem;
+    max-height: 4.4rem;
+    padding: 1.1rem;
+}
+
+.header-chat li:hover {
+    background: #3E444E;
+}
+
+.header-chat li img {
+    max-width: 3.3rem;
+    max-height: 3.3rem;
+}
+
+.threadname {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.threadname img {
+    max-width: 3rem;
+    max-height: 3rem;
+}
+
+.threadname p {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  max-width: max-content;
+}
+
+.input-message {
+    background: #3E444E;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 0;
+    margin: 0 2.1rem 2.9rem;
+    width: 100%;
+    max-width: 131.1rem;
+    height: 100%;
+    max-height: 8.8rem;
+    align-items: center;
+    border-radius: 20px;
+    padding-left: 2rem;
+}
+
+.input-message form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+
+.input-message button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.input {
+    height: 100%;
+    width: 90%;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #99AAB4;
+    position: relative;
+}
+
+.input[type="text"]:focus {
+    font-size: 1.6rem;
+    color: #99AAB4;
+  }
