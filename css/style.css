@@ -51,8 +51,9 @@ li {
 /* left bar */
 .left-menu {
   background-color: var(--background-around);
-  height: 100rem;
-  width: 6.8rem;
+  height: 100vh;
+  width: 100%;
+  max-width: 6.8rem;
 }
 
 .account-image {
@@ -131,7 +132,6 @@ a:hover .settings:hover {
   width: 100%;
   height: 100vh;
   max-width: 24.5rem;
-  max-height: 100rem;
   border-top: 1px var(--background-color) solid;
   border-right: 1px var(--background-color) solid;
   padding-top: 1rem;
@@ -235,11 +235,16 @@ a:hover .settings:hover {
   max-height: 2rem;
 }
 
+.MicroAndVoice button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 /* chatroom */
 
 .chatroom {
   width: 100%;
-  max-width: 1353px;
   position: relative;
 }
 
@@ -256,27 +261,27 @@ a:hover .settings:hover {
 }
 
 .header-chat ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-right: 1rem;
 }
 
 .header-chat li {
-    width: 100%;
-    height: 100%;
-    max-width: 4.4rem;
-    max-height: 4.4rem;
-    padding: 1.1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 4.4rem;
+  max-height: 4.4rem;
+  padding: 1.1rem;
 }
 
 .header-chat li:hover {
-    background: #3E444E;
+  background: #3e444e;
 }
 
 .header-chat li img {
-    max-width: 3.3rem;
-    max-height: 3.3rem;
+  max-width: 3.3rem;
+  max-height: 3.3rem;
 }
 
 .threadname {
@@ -288,8 +293,8 @@ a:hover .settings:hover {
 }
 
 .threadname img {
-    max-width: 3rem;
-    max-height: 3rem;
+  max-width: 3rem;
+  max-height: 3rem;
 }
 
 .threadname p {
@@ -300,51 +305,106 @@ a:hover .settings:hover {
 }
 
 .input-message {
-    background: #3E444E;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    position: absolute;
-    bottom: 0;
-    margin: 0 2.1rem 2.9rem;
-    width: 100%;
-    max-width: 131.1rem;
-    height: 100%;
-    max-height: 8.8rem;
-    align-items: center;
-    border-radius: 20px;
-    padding-left: 2rem;
+  background: #3e444e;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  bottom: 0;
+  margin: 0 2.1rem 2.9rem;
+  width: 100%;
+  max-width: 125.1rem;
+  height: 100%;
+  max-height: 8.8rem;
+  align-items: center;
+  border-radius: 20px;
+  padding-left: 2rem;
 }
 
-.input-message form{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 2rem;
+.input-message form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 2rem;
 }
 
 .input-message button {
-    background-color: transparent;
-    border-color: transparent;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .input {
-    height: 100%;
-    width: 90%;
-    background-color: transparent;
-    border-color: transparent;
+  height: 100%;
+  width: 90%;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .input::placeholder {
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: #99AAB4;
-    position: relative;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #99aab4;
+  position: relative;
 }
 
-.input[type="text"]:focus {
-    font-size: 1.6rem;
-    color: #99AAB4;
-  }
+.input[type="text"]:focus,
+.input[type="text"] {
+  font-size: 1.6rem;
+  color: #99aab4;
+  border: none;
+}
+
+/* tree */
+
+.tree {
+  height: 100vh;
+  width: 100%;
+  max-width: 23.5rem;
+}
+
+.tree-search {
+  border-bottom: 1px var(--background-around) solid;
+  height: 100%;
+  width: 1005;
+  max-height: 4.6rem;
+}
+
+.tree-search form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tree-search form button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tree-input {
+  width: 100%;
+  height: 100%;
+  max-width: 19.8rem;
+  max-height: 2.4rem;
+  background-color: var(--background-around);
+  border: none;
+  border-radius: 15px;
+  padding-left: 1rem;
+}
+
+.tree-input::placeholder {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.tree-input[type="text"]:focus,
+.tree-input[type="text"] {
+  font-size: 1.6rem;
+  color: #99aab4;
+  border: none;
+}
