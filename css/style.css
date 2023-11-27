@@ -311,14 +311,14 @@ a:hover .settings:hover {
   flex-wrap: nowrap;
   position: absolute;
   bottom: 0;
-  margin: 0 2.1rem 2.9rem;
-  width: 100%;
-  max-width: 125.1rem;
+  width: 90%;
   height: 100%;
   max-height: 8.8rem;
   align-items: center;
   border-radius: 20px;
   padding-left: 2rem;
+  margin-bottom: 2.4rem;
+  margin-left: 5%;
 }
 
 .input-message form {
@@ -326,8 +326,8 @@ a:hover .settings:hover {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-right: 2rem;
+  gap: 2rem;
 }
 
 .input-message button {
@@ -407,4 +407,65 @@ a:hover .settings:hover {
   font-size: 1.6rem;
   color: #99aab4;
   border: none;
+}
+
+.tree-list {
+  height: 100%;
+  border-left: 1px var(--background-around) solid;
+}
+.tree-list ul li {
+  width: 25.5rem;
+  height: 6.5rem;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+}
+
+.tree-list ul li:hover {
+  background-color: #3e444e;
+}
+
+.tree-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+.tree-list--icon {
+  max-width: 3rem;
+  max-height: 3rem;
+}
+
+.tree-discript p:nth-child(1) {
+  color: var(--left-servers-color);
+  font-size: 1.6rem;
+}
+
+.tree-discript p:nth-child(2) {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.tree-speakers {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 17rem;
+}
+
+.tree-speakers li {
+  display: block;
+  max-width: 4rem;
+  max-height: 5rem;
+}
+
+.tree-speakers li:hover {
+  background-color: none;
+}
+
+.tree-speakers li img {
+  max-width: 4rem;
+  max-height: 4rem;
+  border-radius: 50px;
+  border: 1px var(--background-color) solid;
 }
