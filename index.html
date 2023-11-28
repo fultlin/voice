@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./script.js"></script>
     <title>Voice</title>
   </head>
 
@@ -256,15 +255,14 @@
 
           <div class="chat">
             <ul class="chat-message">
-              <li>
+              <li class="message-from-person">
                 <div class="personAndMessage">
-                  <img src="" alt="" />
+                  <img src="" alt="" class="ava-in-chat"/>
                   <div class="nameAndMessage">
                     <p class="niknameinchat">Username</p>
                     <p class="message">1111</p>
                   </div>
                 </div>
-
                 <p class="time"></p>
               </li>
             </ul>
@@ -281,7 +279,7 @@
                   class="input"
                   placeholder="Введите сообщение"
                 />
-                <button type="submit" class="send" onclick="">
+                <button type="submit" class="send">
                   <img src="./img/send.png" alt="" />
                 </button>
               </form>
@@ -381,5 +379,6 @@
         </div>
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
