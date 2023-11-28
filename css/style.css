@@ -323,8 +323,40 @@ a:hover .settings:hover {
 }
 
 .chat-message {
-  background-color: red;
   margin: 2rem 3rem;
+  overflow: auto;
+  height: 100%;
+  max-height: 80rem;
+}
+
+.chat-message::-webkit-scrollbar {
+  width: 0.5rem;               /* ширина scrollbar */
+}
+.chat-message::-webkit-scrollbar-track {
+  background: transparent;        /* цвет дорожки */
+}
+.chat-message::-webkit-scrollbar-thumb {
+  background-color: var(--background-around);    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+}
+
+.message-from-person {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.personAndMessage {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.ava-in-chat {
+  border-radius: 50%;
 }
 
 .niknameinchat {
@@ -335,6 +367,11 @@ a:hover .settings:hover {
 
 .message {
   font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.time {
+  font-size: 1.2rem;
   color: var(--primary-color);
 }
 
