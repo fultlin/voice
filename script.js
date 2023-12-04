@@ -1,7 +1,13 @@
 let buttonSend = document.querySelector(".send");
 
+
 buttonSend.onclick = function (event) {
   event.preventDefault();
+
+  let inputMessage = document.querySelector('.input');
+  
+
+
   let newMessage = document.createElement("li");
   newMessage.classList.add("message-from-person");
 
@@ -9,6 +15,7 @@ buttonSend.onclick = function (event) {
   personAndMessage.classList.add("personAndMessage");
 
   let avaInChat = document.createElement("img");
+  avaInChat.src = './img/voice.svg'
   avaInChat.classList.add("ava-in-chat");
   avaInChat.alt = "AVA";
 
@@ -21,7 +28,8 @@ buttonSend.onclick = function (event) {
 
   let message = document.createElement("p");
   message.classList.add("message");
-  message.textContent = "111111";
+  message.textContent = inputMessage.value;
+  inputMessage.textContent = ''
 
   nameAndMessage.appendChild(nickname);
   nameAndMessage.appendChild(message);
@@ -34,4 +42,18 @@ buttonSend.onclick = function (event) {
   let listMessage = document.querySelector(".chat-message");
   listMessage.classList.add("chat-message");
   listMessage.append(newMessage);
+  
 };
+
+
+// let password = document.querySelector('.password');
+// let showPassword = document.querySelector('.show-password');
+
+// showPassword.onchange = function () {
+//   if (showPassword.checked) {
+//     password.type = 'text';
+//     }else {
+//       password.type = 'password';
+//       }
+  
+// };
